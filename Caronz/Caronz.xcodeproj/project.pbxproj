@@ -1,0 +1,789 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0EE38AFCAC0AE73198D5D860 /* Pods_Caronz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BD3836F05A754768559905 /* Pods_Caronz.framework */; };
+		84673C6E53EAA1402A1737BB /* Pods_Caronz_CaronzUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4793122CB5428DFAE20EF7A1 /* Pods_Caronz_CaronzUITests.framework */; };
+		B3D7DE1B6E304448B73FA969 /* Pods_CaronzTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD02B5387BFA62FB1948B28D /* Pods_CaronzTests.framework */; };
+		D311DC712713C1630018C2AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D311DC702713C1630018C2AB /* AppDelegate.swift */; };
+		D311DC732713C1630018C2AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D311DC722713C1630018C2AB /* SceneDelegate.swift */; };
+		D311DC752713C1630018C2AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D311DC742713C1630018C2AB /* ViewController.swift */; };
+		D311DC782713C1630018C2AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D311DC762713C1630018C2AB /* Main.storyboard */; };
+		D311DC7A2713C16A0018C2AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D311DC792713C16A0018C2AB /* Assets.xcassets */; };
+		D311DC7D2713C16A0018C2AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D311DC7B2713C16A0018C2AB /* LaunchScreen.storyboard */; };
+		D311DC882713C16A0018C2AB /* CaronzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D311DC872713C16A0018C2AB /* CaronzTests.swift */; };
+		D311DC932713C16A0018C2AB /* CaronzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D311DC922713C16A0018C2AB /* CaronzUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D311DC842713C16A0018C2AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D311DC652713C1630018C2AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D311DC6C2713C1630018C2AB;
+			remoteInfo = Caronz;
+		};
+		D311DC8F2713C16A0018C2AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D311DC652713C1630018C2AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D311DC6C2713C1630018C2AB;
+			remoteInfo = Caronz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D178C4F80968D55943B9932 /* Pods-Caronz-CaronzUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Caronz-CaronzUITests.debug.xcconfig"; path = "Target Support Files/Pods-Caronz-CaronzUITests/Pods-Caronz-CaronzUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		25BD3836F05A754768559905 /* Pods_Caronz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Caronz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26CD4D6D7E6C199D938E7122 /* Pods-CaronzTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaronzTests.debug.xcconfig"; path = "Target Support Files/Pods-CaronzTests/Pods-CaronzTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4793122CB5428DFAE20EF7A1 /* Pods_Caronz_CaronzUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Caronz_CaronzUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F7B40643064976BA8E38997 /* Pods-Caronz-CaronzUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Caronz-CaronzUITests.release.xcconfig"; path = "Target Support Files/Pods-Caronz-CaronzUITests/Pods-Caronz-CaronzUITests.release.xcconfig"; sourceTree = "<group>"; };
+		74D644E6529C3EC099EAC2DB /* Pods-Caronz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Caronz.release.xcconfig"; path = "Target Support Files/Pods-Caronz/Pods-Caronz.release.xcconfig"; sourceTree = "<group>"; };
+		C825A5B938EE94AE9AE34A24 /* Pods-Caronz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Caronz.debug.xcconfig"; path = "Target Support Files/Pods-Caronz/Pods-Caronz.debug.xcconfig"; sourceTree = "<group>"; };
+		D311DC6D2713C1630018C2AB /* Caronz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caronz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D311DC702713C1630018C2AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D311DC722713C1630018C2AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D311DC742713C1630018C2AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D311DC772713C1630018C2AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D311DC792713C16A0018C2AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D311DC7C2713C16A0018C2AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D311DC7E2713C16A0018C2AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D311DC832713C16A0018C2AB /* CaronzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaronzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D311DC872713C16A0018C2AB /* CaronzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaronzTests.swift; sourceTree = "<group>"; };
+		D311DC892713C16A0018C2AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D311DC8E2713C16A0018C2AB /* CaronzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaronzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D311DC922713C16A0018C2AB /* CaronzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaronzUITests.swift; sourceTree = "<group>"; };
+		D311DC942713C16A0018C2AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E54F3928E1FB74954B9E4979 /* Pods-CaronzTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaronzTests.release.xcconfig"; path = "Target Support Files/Pods-CaronzTests/Pods-CaronzTests.release.xcconfig"; sourceTree = "<group>"; };
+		FD02B5387BFA62FB1948B28D /* Pods_CaronzTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CaronzTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D311DC6A2713C1630018C2AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EE38AFCAC0AE73198D5D860 /* Pods_Caronz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D311DC802713C16A0018C2AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3D7DE1B6E304448B73FA969 /* Pods_CaronzTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D311DC8B2713C16A0018C2AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84673C6E53EAA1402A1737BB /* Pods_Caronz_CaronzUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6857497962756C3D5FA6611E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C825A5B938EE94AE9AE34A24 /* Pods-Caronz.debug.xcconfig */,
+				74D644E6529C3EC099EAC2DB /* Pods-Caronz.release.xcconfig */,
+				0D178C4F80968D55943B9932 /* Pods-Caronz-CaronzUITests.debug.xcconfig */,
+				6F7B40643064976BA8E38997 /* Pods-Caronz-CaronzUITests.release.xcconfig */,
+				26CD4D6D7E6C199D938E7122 /* Pods-CaronzTests.debug.xcconfig */,
+				E54F3928E1FB74954B9E4979 /* Pods-CaronzTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D311DC642713C1630018C2AB = {
+			isa = PBXGroup;
+			children = (
+				D311DC6F2713C1630018C2AB /* Caronz */,
+				D311DC862713C16A0018C2AB /* CaronzTests */,
+				D311DC912713C16A0018C2AB /* CaronzUITests */,
+				D311DC6E2713C1630018C2AB /* Products */,
+				6857497962756C3D5FA6611E /* Pods */,
+				DB0BD4F0B1E74DD4B5B94DB7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D311DC6E2713C1630018C2AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D311DC6D2713C1630018C2AB /* Caronz.app */,
+				D311DC832713C16A0018C2AB /* CaronzTests.xctest */,
+				D311DC8E2713C16A0018C2AB /* CaronzUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D311DC6F2713C1630018C2AB /* Caronz */ = {
+			isa = PBXGroup;
+			children = (
+				D311DC702713C1630018C2AB /* AppDelegate.swift */,
+				D311DC722713C1630018C2AB /* SceneDelegate.swift */,
+				D311DC742713C1630018C2AB /* ViewController.swift */,
+				D311DC762713C1630018C2AB /* Main.storyboard */,
+				D311DC792713C16A0018C2AB /* Assets.xcassets */,
+				D311DC7B2713C16A0018C2AB /* LaunchScreen.storyboard */,
+				D311DC7E2713C16A0018C2AB /* Info.plist */,
+			);
+			path = Caronz;
+			sourceTree = "<group>";
+		};
+		D311DC862713C16A0018C2AB /* CaronzTests */ = {
+			isa = PBXGroup;
+			children = (
+				D311DC872713C16A0018C2AB /* CaronzTests.swift */,
+				D311DC892713C16A0018C2AB /* Info.plist */,
+			);
+			path = CaronzTests;
+			sourceTree = "<group>";
+		};
+		D311DC912713C16A0018C2AB /* CaronzUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D311DC922713C16A0018C2AB /* CaronzUITests.swift */,
+				D311DC942713C16A0018C2AB /* Info.plist */,
+			);
+			path = CaronzUITests;
+			sourceTree = "<group>";
+		};
+		DB0BD4F0B1E74DD4B5B94DB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25BD3836F05A754768559905 /* Pods_Caronz.framework */,
+				4793122CB5428DFAE20EF7A1 /* Pods_Caronz_CaronzUITests.framework */,
+				FD02B5387BFA62FB1948B28D /* Pods_CaronzTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D311DC6C2713C1630018C2AB /* Caronz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D311DC972713C16A0018C2AB /* Build configuration list for PBXNativeTarget "Caronz" */;
+			buildPhases = (
+				AE9ECBB2B4D3260C3CF207AA /* [CP] Check Pods Manifest.lock */,
+				D311DC692713C1630018C2AB /* Sources */,
+				D311DC6A2713C1630018C2AB /* Frameworks */,
+				D311DC6B2713C1630018C2AB /* Resources */,
+				2D9E57DBAD7D57C6834B4602 /* [CP] Embed Pods Frameworks */,
+				A223FBC7914A6242041B7303 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Caronz;
+			productName = Caronz;
+			productReference = D311DC6D2713C1630018C2AB /* Caronz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D311DC822713C16A0018C2AB /* CaronzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D311DC9A2713C16A0018C2AB /* Build configuration list for PBXNativeTarget "CaronzTests" */;
+			buildPhases = (
+				5AD58D4E876B19F1E5A8271A /* [CP] Check Pods Manifest.lock */,
+				D311DC7F2713C16A0018C2AB /* Sources */,
+				D311DC802713C16A0018C2AB /* Frameworks */,
+				D311DC812713C16A0018C2AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D311DC852713C16A0018C2AB /* PBXTargetDependency */,
+			);
+			name = CaronzTests;
+			productName = CaronzTests;
+			productReference = D311DC832713C16A0018C2AB /* CaronzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D311DC8D2713C16A0018C2AB /* CaronzUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D311DC9D2713C16A0018C2AB /* Build configuration list for PBXNativeTarget "CaronzUITests" */;
+			buildPhases = (
+				A6483A110EE9F4AD617DCD6D /* [CP] Check Pods Manifest.lock */,
+				D311DC8A2713C16A0018C2AB /* Sources */,
+				D311DC8B2713C16A0018C2AB /* Frameworks */,
+				D311DC8C2713C16A0018C2AB /* Resources */,
+				5195A9E80A782B164488CE16 /* [CP] Embed Pods Frameworks */,
+				A17D8732B944DD4E646BE2F2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D311DC902713C16A0018C2AB /* PBXTargetDependency */,
+			);
+			name = CaronzUITests;
+			productName = CaronzUITests;
+			productReference = D311DC8E2713C16A0018C2AB /* CaronzUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D311DC652713C1630018C2AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					D311DC6C2713C1630018C2AB = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					D311DC822713C16A0018C2AB = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = D311DC6C2713C1630018C2AB;
+					};
+					D311DC8D2713C16A0018C2AB = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = D311DC6C2713C1630018C2AB;
+					};
+				};
+			};
+			buildConfigurationList = D311DC682713C1630018C2AB /* Build configuration list for PBXProject "Caronz" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D311DC642713C1630018C2AB;
+			productRefGroup = D311DC6E2713C1630018C2AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D311DC6C2713C1630018C2AB /* Caronz */,
+				D311DC822713C16A0018C2AB /* CaronzTests */,
+				D311DC8D2713C16A0018C2AB /* CaronzUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D311DC6B2713C1630018C2AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D311DC7D2713C16A0018C2AB /* LaunchScreen.storyboard in Resources */,
+				D311DC7A2713C16A0018C2AB /* Assets.xcassets in Resources */,
+				D311DC782713C1630018C2AB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D311DC812713C16A0018C2AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D311DC8C2713C16A0018C2AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D9E57DBAD7D57C6834B4602 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Caronz/Pods-Caronz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Caronz/Pods-Caronz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Caronz/Pods-Caronz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5195A9E80A782B164488CE16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Caronz-CaronzUITests/Pods-Caronz-CaronzUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Caronz-CaronzUITests/Pods-Caronz-CaronzUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Caronz-CaronzUITests/Pods-Caronz-CaronzUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AD58D4E876B19F1E5A8271A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CaronzTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A17D8732B944DD4E646BE2F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Caronz-CaronzUITests/Pods-Caronz-CaronzUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Caronz-CaronzUITests/Pods-Caronz-CaronzUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Caronz-CaronzUITests/Pods-Caronz-CaronzUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A223FBC7914A6242041B7303 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Caronz/Pods-Caronz-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Caronz/Pods-Caronz-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Caronz/Pods-Caronz-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6483A110EE9F4AD617DCD6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Caronz-CaronzUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE9ECBB2B4D3260C3CF207AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Caronz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D311DC692713C1630018C2AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D311DC752713C1630018C2AB /* ViewController.swift in Sources */,
+				D311DC712713C1630018C2AB /* AppDelegate.swift in Sources */,
+				D311DC732713C1630018C2AB /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D311DC7F2713C16A0018C2AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D311DC882713C16A0018C2AB /* CaronzTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D311DC8A2713C16A0018C2AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D311DC932713C16A0018C2AB /* CaronzUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D311DC852713C16A0018C2AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D311DC6C2713C1630018C2AB /* Caronz */;
+			targetProxy = D311DC842713C16A0018C2AB /* PBXContainerItemProxy */;
+		};
+		D311DC902713C16A0018C2AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D311DC6C2713C1630018C2AB /* Caronz */;
+			targetProxy = D311DC8F2713C16A0018C2AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D311DC762713C1630018C2AB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D311DC772713C1630018C2AB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D311DC7B2713C16A0018C2AB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D311DC7C2713C16A0018C2AB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D311DC952713C16A0018C2AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D311DC962713C16A0018C2AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D311DC982713C16A0018C2AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C825A5B938EE94AE9AE34A24 /* Pods-Caronz.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8FH8PKCQ84;
+				INFOPLIST_FILE = Caronz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.caronz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D311DC992713C16A0018C2AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74D644E6529C3EC099EAC2DB /* Pods-Caronz.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8FH8PKCQ84;
+				INFOPLIST_FILE = Caronz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.caronz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D311DC9B2713C16A0018C2AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26CD4D6D7E6C199D938E7122 /* Pods-CaronzTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8FH8PKCQ84;
+				INFOPLIST_FILE = CaronzTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Lemitty-LLC.CaronzTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Caronz.app/Caronz";
+			};
+			name = Debug;
+		};
+		D311DC9C2713C16A0018C2AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E54F3928E1FB74954B9E4979 /* Pods-CaronzTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8FH8PKCQ84;
+				INFOPLIST_FILE = CaronzTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Lemitty-LLC.CaronzTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Caronz.app/Caronz";
+			};
+			name = Release;
+		};
+		D311DC9E2713C16A0018C2AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D178C4F80968D55943B9932 /* Pods-Caronz-CaronzUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8FH8PKCQ84;
+				INFOPLIST_FILE = CaronzUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Lemitty-LLC.CaronzUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Caronz;
+			};
+			name = Debug;
+		};
+		D311DC9F2713C16A0018C2AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F7B40643064976BA8E38997 /* Pods-Caronz-CaronzUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8FH8PKCQ84;
+				INFOPLIST_FILE = CaronzUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Lemitty-LLC.CaronzUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Caronz;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D311DC682713C1630018C2AB /* Build configuration list for PBXProject "Caronz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D311DC952713C16A0018C2AB /* Debug */,
+				D311DC962713C16A0018C2AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D311DC972713C16A0018C2AB /* Build configuration list for PBXNativeTarget "Caronz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D311DC982713C16A0018C2AB /* Debug */,
+				D311DC992713C16A0018C2AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D311DC9A2713C16A0018C2AB /* Build configuration list for PBXNativeTarget "CaronzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D311DC9B2713C16A0018C2AB /* Debug */,
+				D311DC9C2713C16A0018C2AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D311DC9D2713C16A0018C2AB /* Build configuration list for PBXNativeTarget "CaronzUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D311DC9E2713C16A0018C2AB /* Debug */,
+				D311DC9F2713C16A0018C2AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D311DC652713C1630018C2AB /* Project object */;
+}
