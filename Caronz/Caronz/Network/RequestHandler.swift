@@ -13,7 +13,7 @@ class RequestHandler {
     
     class func loginUser(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
         let url = Constants.URL.login
-        print(url)
+        
         NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth: false, success: { (successResponse) in
             let dictionary = successResponse as! [String: Any]
             if let userData = dictionary["user"] as? [String:Any] {
@@ -33,7 +33,7 @@ class RequestHandler {
 
     class func registerUser(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
         let url = Constants.URL.register
-        print(url)
+        
         NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:false, success: { (successResponse) in
             let dictionary = successResponse as! [String: Any]
             if let userData = dictionary["data"] as? [String:Any] {
@@ -52,7 +52,7 @@ class RequestHandler {
 
     class func forgotPassword(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
         let url = Constants.URL.FORGOT_PASSWORD
-        print(url)
+        
         NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:false, success: { (successResponse) in
             
             success(successResponse)
@@ -64,7 +64,7 @@ class RequestHandler {
 
     class func resetPassword(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
         let url = Constants.URL.RESET_PASSWORD
-        print(url)
+        
         NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:false, success: { (successResponse) in
             
             success(successResponse)
@@ -76,7 +76,7 @@ class RequestHandler {
 
     class func changePassword(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
         let url = Constants.URL.CHANGE_PASSWORD
-        print(url)
+        
         NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
             
             success(successResponse)
@@ -88,7 +88,7 @@ class RequestHandler {
 
     class func getProfile(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
         let url = Constants.URL.UserProfile
-        print(url)
+        
         NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
             
             success(successResponse)
@@ -100,7 +100,7 @@ class RequestHandler {
 
     class func profileUpdate(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
         let url = Constants.URL.UseProfileUpdate
-        print(url)
+        
         NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
             let dictionary = successResponse as! [String: Any]
             if let userData = dictionary["user"] as? [String:Any] {
@@ -116,67 +116,10 @@ class RequestHandler {
             failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
         }
     }
-
-    class func getHome(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_HOME_DATA
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func getUserBalance(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_USER_BALANCES
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func getCoins(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_ALL_COINS
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
     
-    class func getCoinDetail(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_COIN_DETAIL
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func coinDeposit(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.COIN_DEPOSIT
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-    
-    class func coinStellarDeposit(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.COIN_STELLAR_DEPOSIT
-        print(url)
+    class func uploadProfileImage(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.UserProfileImage
+        
         NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
             
             success(successResponse)
@@ -186,59 +129,10 @@ class RequestHandler {
         }
     }
 
-    class func getCoinDepositList(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.COIN_DEPOSIT
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-    
-    class func coinExchange(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.COIN_EXCHANGE
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-    
-    class func getCoinExchange(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.COIN_EXCHANGE
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                    
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func getCoinExchangeList(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.COIN_EXCHANGE_LIST
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-           
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-    
-    class func getCoinExchangeRate(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.COIN_EXCHANGE_RATE
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-           
+    class func getCategories(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.GET_CATEGORIES
+        
+        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:false, success: { (successResponse) in
             success(successResponse)
         }) { (error) in
                         
@@ -246,11 +140,10 @@ class RequestHandler {
         }
     }
 
-    class func coinExchangeBuyAssets(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_BUY_COIN_ASSETS
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
+    class func searchCars(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.SEARCH_CARS
+        
+        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:false, success: { (successResponse) in
             success(successResponse)
         }) { (error) in
                         
@@ -258,262 +151,9 @@ class RequestHandler {
         }
     }
 
-    class func coinExchangeSendAssets(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_SEND_COIN_ASSETS
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-           
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func coinWithdraw(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.COIN_WITHDRAW
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            // let dictionary = successResponse as! [String: Any]
-            // let data = NSKeyedArchiver.archivedData(withRootObject: dictionary)
-            // UserDefaults.standard.set(data, forKey: "userData")
-            // UserDefaults.standard.synchronize()
-            // let objRegister = Any?(fromDictionary: dictionary)
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func getCoinWithdrawList(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.COIN_WITHDRAW
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func getCoinWithdrawableAssets(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_WITHDRAWBLE_COIN_ASSETS
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func coinTrade(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.COIN_TRADE
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func coinTradeList(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.COIN_TRADE_LIST
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func coinTradeData(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.COIN_TRADE_DATA
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func coinTradeHistory(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.COIN_TRADE_HISTORY_DATA
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func coinTradeCancel(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.COIN_TRADE_CANCEL
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func getUSDCBalance(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_USDC_BALANCE
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func coinTransfer(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.TRANSFER_COIN
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func coinTransferList(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.TRANSFER_COIN
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func coinTransferAddContact(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.ADD_TRANSFER_COIN_CONTACT
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func coinTransferRemoveContact(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REMOVE_TRANSFER_COIN_CONTACT
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func getStakeBalance(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_STAKE_BALANCE + "/" + (parameter["id"] as! String)
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func stake(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_STAKE
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func getStakeList(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_STAKE_LIST
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-    
-    class func getStakeHistory(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_STAKE_HISTORY
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func stakeRelease(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_STAKE_RELEASE
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func getStockDetail(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_STOCK_DETAIL
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func searchStocks(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_ALL_STOCKS_DAILY
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-           
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func getStocksAggregates(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_ALL_STOCKS_AGGREGATE
-        print(url)
+    class func searchDrivers(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.SEARCH_DRIVERS
+        
         NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:false, success: { (successResponse) in
             
             success(successResponse)
@@ -522,12 +162,11 @@ class RequestHandler {
             failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
         }
     }
-
-    class func getStockNews(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_STOCK_NEWS
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
+    
+    class func getCarDetail(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.GET_CAR_DETAIL
+        
+        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:false, success: { (successResponse) in
             success(successResponse)
         }) { (error) in
                         
@@ -535,81 +174,9 @@ class RequestHandler {
         }
     }
 
-    class func createStocksOrder(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_STOCK_ORDER_CREATE
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func replaceStocksOrder(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_STOCK_ORDER_REPLACE
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func cancelStocksOrder(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_STOCK_ORDER_CANCEL
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func getInvestedStocks(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_STOCK_ORDER_INVESTED
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func getPendingStocks(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_STOCK_ORDER_PENDING
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func getAllOrderStocks(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_STOCK_ORDER
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func depositStocks(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_DEPOSIT_STOCK
-        print(url)
+    class func postCar(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.POST_CAR
+        
         NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
             
             success(successResponse)
@@ -619,11 +186,23 @@ class RequestHandler {
         }
     }
     
-    class func getStocksDepositCoinHistory(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_DEPOSIT_COIN_STOCK_HISOTRY
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+    class func postCarImage(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.POST_CAR_IMAGE
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
             
+            success(successResponse)
+        }) { (error) in
+                    
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func deleteCarImage(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.DELETE_CAR_IMAGE
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+           
             success(successResponse)
         }) { (error) in
                         
@@ -631,11 +210,11 @@ class RequestHandler {
         }
     }
     
-    class func getStocksDepositBankHistory(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_DEPOSIT_BANK_STOCK_HISOTRY
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
+    class func deleteCar(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.DELETE_CAR
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+           
             success(successResponse)
         }) { (error) in
                         
@@ -643,9 +222,9 @@ class RequestHandler {
         }
     }
 
-    class func withdrawStocks(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.STOCK_WITHDRAW
-        print(url)
+    class func updateCar(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.UPDATE_CAR
+        
         NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
             
             success(successResponse)
@@ -655,10 +234,70 @@ class RequestHandler {
         }
     }
 
-    class func withdrawStocksList(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.STOCK_WITHDRAW
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+    class func activateCar(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.ACTIVATE_CAR
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+           
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func paymentInvoice(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.ACTIVATE_CAR
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func requestBuy(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.REQUEST_BUY
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func confirmBuy(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.CONFIRM_BUY
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func completeBuy(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.COMPLETE_BUY
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func cancelBuy(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.CANCEL_BUY
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
             
             success(successResponse)
         }) { (error) in
@@ -667,9 +306,318 @@ class RequestHandler {
         }
     }
     
+    class func requestBooking(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.REQUEST_BOOKING
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+    
+    class func getBookingList(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.GET_BOOKING_LIST
+        
+        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func confirmBooking(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.CONFIRM_BOOKING
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+    
+    class func updateBooking(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.UPDATE_BOOKING
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+    
+    class func declineBooking(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.DECLINE_BOOKING
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func completeBooking(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.COMPLETE_BOOKING
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+    
+    class func cancelBookingInfo(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.GET_CANCEL_BOOKING_INFO
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func cancelBooking(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.CANCEL_BOOKING
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+    
+    class func requestHire(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.REQUEST_HIRE
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+    
+    class func getHireList(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.GET_HIRE_LIST
+        
+        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func confirmHire(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.CONFIRM_HIRE
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+    
+    class func updateHire(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.UPDATE_HIRE
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+    
+    class func declineHire(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.DECLINE_HIRE
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+    
+    class func deleteHire(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.DELETE_HIRE
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func completeHire(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.COMPLETE_HIRE
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+    
+    class func cancelHireInfo(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.GET_CANCEL_HIRE_INFO
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func cancelHire(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.CANCEL_HIRE
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func getSellerCarList(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.GET_SELLER_CAR_LIST
+        
+        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func getSellerAccount(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.GET_SELLER_ACCOUNT
+        
+        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func cashout(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.REQUEST_CASHOUT
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func getCashoutHistory(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.GET_CASHOUT_HISTORY
+        
+        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func requestChat(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.REQUEST_CHAT
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func sendMessage(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.SEND_MESSAGE
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func closeChat(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.CLOSE_CHAT
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func getMsgInbox(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.GET_MESSAGE_INBOX
+        
+        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
+    class func deleteMsgInbox(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.DELETE_MESSAGE_INBOX
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+
     class func handleCard(method: HTTPMethod, parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
         let url = Constants.URL.REQUEST_CARD
-        print(url)
+        
         if method == .get {
             NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
                 
@@ -702,7 +650,7 @@ class RequestHandler {
     
     class func stripeConnect(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
         let url = Constants.URL.REQUEST_STRIPE_CONNECT
-        print(url)
+        
         NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
             
             success(successResponse)
@@ -714,7 +662,7 @@ class RequestHandler {
     
     class func getPlaidToken(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
         let url = Constants.URL.GET_PLAID_LINK_TOKEN
-        print(url)
+        
         NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
             
             success(successResponse)
@@ -726,7 +674,32 @@ class RequestHandler {
     
     class func connectPlaidBank(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
         let url = Constants.URL.SEND_PLAID_CONNECT_BANK
-        print(url)
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+    
+    class func getCoinList(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.GET_COINS
+        
+        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+            
+            success(successResponse)
+        }) { (error) in
+                        
+            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+        }
+    }
+    
+
+    class func coinDeposit(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.COIN_DEPOSIT
+        
         NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
             
             success(successResponse)
@@ -737,117 +710,9 @@ class RequestHandler {
     }
     
 
-    class func getBankDetail(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_BANK_DETAIL
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func addBank(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_ADD_BANK
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func removeBankFriend(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_REMOVE_FRIEND_BANK
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func addIBAN(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_ADD_IBAN
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func addBankFriend(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_ADD_FRIEND_BANK
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func addBankMoney(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_ADD_MONEY
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func sendBankMoney(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_SEND_MONEY
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func getBankFriendList(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_FRIEND_BANK_LIST
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func getBankCurrencyRate(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_CONVERSION_RATE
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func getPredictionList(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_PREDICT
-        print(url)
+    class func getCoinDepositList(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.COIN_DEPOSIT
+        
         NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
             
             success(successResponse)
@@ -857,33 +722,9 @@ class RequestHandler {
         }
     }
     
-    class func getPredictableList(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_PREDICTABLE_LIST
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func predict(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_PREDICT
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-           
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func bidPredict(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_PREDICT_BID
-        print(url)
+    class func deleteCoinDeposit(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.DELETE_COIN_DEPOSIT
+        
         NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
             
             success(successResponse)
@@ -892,10 +733,10 @@ class RequestHandler {
             failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
         }
     }
-
-    class func cancelPredict(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_PREDICT_CANCEL
-        print(url)
+    
+    class func requestAvisReservation(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.REQUEST_AVIS_RESERVATION
+        
         NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
             
             success(successResponse)
@@ -904,11 +745,11 @@ class RequestHandler {
             failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
         }
     }
-
-    class func getMtnService(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_MTN_SERVICE
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+    
+    class func requestAvisLocations(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.REQUEST_AVIS_LOCATIONS
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:false, success: { (successResponse) in
             
             success(successResponse)
         }) { (error) in
@@ -916,11 +757,11 @@ class RequestHandler {
             failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
         }
     }
-
-    class func getMtnTransactions(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_MTN_TRANSACTION
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+    
+    class func searchAvisCars(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.SEARCH_AVIS_CARS
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:false, success: { (successResponse) in
             
             success(successResponse)
         }) { (error) in
@@ -928,11 +769,11 @@ class RequestHandler {
             failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
         }
     }
-
-    class func payMtn(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_MTN_PAY
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+    
+    class func requestAvisRate(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.REQUEST_AVIS_RATE
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:false, success: { (successResponse) in
             
             success(successResponse)
         }) { (error) in
@@ -940,83 +781,11 @@ class RequestHandler {
             failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
         }
     }
-
-    class func topupMtn(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_MTN_TOPUP
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func convertMtn(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_MTN_CONVERT
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func zaboRedirect(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.ZABO_REDIRECT
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:false, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func getZaboAccounts(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_ZABO_ACCOUNTS
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-           
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func createZaboAccount(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_ZABO_ACCOUNTS
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func getZaboAccountDetail(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.GET_ZABO_ACCOUNT + (parameter["id"] as! String)
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
-        }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
-        }
-    }
-
-    class func createZaboDeposit(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
-        let url = Constants.URL.REQUEST_ZABO_DEPOSIT
-        print(url)
-        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+    
+    class func getAvisReservations(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
+        let url = Constants.URL.GET_AVIS_RESERVATIONS
+        
+        NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:false, success: { (successResponse) in
             
             success(successResponse)
         }) { (error) in
@@ -1027,8 +796,8 @@ class RequestHandler {
     
     class func getSupport(parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
         let url = Constants.URL.HELP
-        print(url)
-        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
+        
+        NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:false, success: { (successResponse) in
             
             success(successResponse)
         }) { (error) in

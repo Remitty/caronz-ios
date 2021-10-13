@@ -27,7 +27,7 @@ class Constants {
          static  let HELP = REDIRECT_URL + "help";
 
          static  let UserProfile = REDIRECT_URL+"profile";
-         static  let UseProfileImage = REDIRECT_URL+"profile/image";
+         static  let UserProfileImage = REDIRECT_URL+"profile/image";
 
          static  let POST_CAR = REDIRECT_URL + "car";
          static  let POST_CAR_IMAGE = REDIRECT_URL + "car/image";
@@ -52,15 +52,15 @@ class Constants {
          static  let COMPLETE_BOOKING = REDIRECT_URL + "booking/complete";
          static  let CANCEL_BOOKING = REDIRECT_URL + "booking/cancel";
         
-         static  let REQUEST_BOOKING = REDIRECT_URL + "hire";
-         static  let GET_BOOKING_LIST = REDIRECT_URL + "hire/list";
-         static  let CONFIRM_BOOKING = REDIRECT_URL + "hire/confirm";
-         static  let UPDATE_BOOKING = REDIRECT_URL + "hire/update";
-         static  let DECLINE_BOOKING = REDIRECT_URL + "hire/decline";
-         static  let DELETE_BOOKING = REDIRECT_URL + "hire/delete";
-         static  let GET_CANCEL_BOOKING_INFO = REDIRECT_URL + "hire/cancel/info";
-         static  let COMPLETE_BOOKING = REDIRECT_URL + "hire/complete";
-         static  let CANCEL_BOOKING = REDIRECT_URL + "hire/cancel";
+         static  let REQUEST_HIRE = REDIRECT_URL + "hire";
+         static  let GET_HIRE_LIST = REDIRECT_URL + "hire/list";
+         static  let CONFIRM_HIRE = REDIRECT_URL + "hire/confirm";
+         static  let UPDATE_HIRE = REDIRECT_URL + "hire/update";
+         static  let DECLINE_HIRE = REDIRECT_URL + "hire/decline";
+         static  let DELETE_HIRE = REDIRECT_URL + "hire/delete";
+         static  let GET_CANCEL_HIRE_INFO = REDIRECT_URL + "hire/cancel/info";
+         static  let COMPLETE_HIRE = REDIRECT_URL + "hire/complete";
+         static  let CANCEL_HIRE = REDIRECT_URL + "hire/cancel";
         
          static  let GET_SELLER_CAR_LIST = REDIRECT_URL + "seller/car/list";
          static  let GET_SELLER_ACCOUNT = REDIRECT_URL + "seller/account";
@@ -84,8 +84,7 @@ class Constants {
         static let SEND_PLAID_CONNECT_BANK = REDIRECT_URL + "plaid/bank/create";
         
         static let GET_COINS = REDIRECT_URL + "coins";
-        static let REQUEST_COIN_DEPOSIT = REDIRECT_URL + "coin/deposit";
-        static let GET_COIN_DEPOSIT_HISTORY = REDIRECT_URL + "coin/deposit";
+        static let COIN_DEPOSIT = REDIRECT_URL + "coin/deposit";
         static let DELETE_COIN_DEPOSIT = REDIRECT_URL + "coin/delete";
         
         static let REQUEST_AVIS_RESERVATION = REDIRECT_URL + "avis/create";
@@ -100,10 +99,10 @@ class Constants {
         static let GET_SELLER_PROFILE = REDIRECT_URL + "seller/profile";
         static let NOTIFICATION = REDIRECT_URL + "notification";
         
-        static let REQUEST_AVIS_RESERVATION = REDIRECT_URL + "avis/locatins";
+        static let REQUEST_AVIS_LOCATIONS = REDIRECT_URL + "avis/locatins";
         static let SEARCH_AVIS_CARS = REDIRECT_URL + "avis/cars";
-        static let GET_AVIS_RATE = REDIRECT_URL + "avis/rate";
-        static let GET_AVIS_RESERVATION = REDIRECT_URL + "avis/reservation";
+        static let REQUEST_AVIS_RATE = REDIRECT_URL + "avis/rate";
+        static let GET_AVIS_RESERVATIONS = REDIRECT_URL + "avis/reservation";
         
     }
     
