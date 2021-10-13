@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Caronz
+//  wyretrade
 //
-//  Created by brian on 10/10/21.
+//  Created by maxus on 2/28/21.
 //
 
 import UIKit
